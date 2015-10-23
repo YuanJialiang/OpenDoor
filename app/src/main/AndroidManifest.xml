@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="scut.jlyuan.opendoor"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--<activity-->
+            <!--android:name=".MainActivity"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:theme="@style/AppTheme.NoActionBar">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <receiver android:name=".OpenDoorWidget">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/opendoorwidget"/>
+            <intent-filter>
+
+                <action android:name="front"/>
+                <action android:name="back"/>
+                <action android:name="underground"/>
+                <action android:name="hall"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+
+            </intent-filter>
+        </receiver>
+
+
+        <!--<receiver android:name=".RequestReceiver">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="front"/>-->
+                <!--<action android:name="back"/>-->
+                <!--<action android:name="hall"/>-->
+                <!--<action android:name="show"/>-->
+                <!--<action android:name="hide"/>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+    </application>
+
+</manifest>
