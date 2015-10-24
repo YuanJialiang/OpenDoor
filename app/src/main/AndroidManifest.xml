@@ -11,16 +11,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<activity-->
-            <!--android:name=".MainActivity"-->
-            <!--android:label="@string/app_name"-->
-            <!--android:theme="@style/AppTheme.NoActionBar">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
         <receiver android:name=".OpenDoorWidget">
             <meta-data
@@ -38,15 +38,15 @@
         </receiver>
 
 
-        <!--<receiver android:name=".RequestReceiver">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="front"/>-->
-                <!--<action android:name="back"/>-->
-                <!--<action android:name="hall"/>-->
-                <!--<action android:name="show"/>-->
-                <!--<action android:name="hide"/>-->
-            <!--</intent-filter>-->
-        <!--</receiver>-->
+        <receiver android:name=".RequestReceiver">
+            <intent-filter>
+                <action android:name="notification_front"/>
+                <action android:name="notification_back"/>
+                <action android:name="notification_hall"/>
+                <action android:name="notification_show"/>
+                <action android:name="notification_hide"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

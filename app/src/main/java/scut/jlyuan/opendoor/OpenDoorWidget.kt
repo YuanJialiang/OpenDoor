@@ -81,7 +81,7 @@ class OpenDoorWidget : AppWidgetProvider() {
         return PendingIntent.getBroadcast(context, request_code, newIntent(context, action), PendingIntent.FLAG_UPDATE_CURRENT)
     }
 
-    private fun login(id: String) {
+    fun login(id: String) {
         val retrofit = Retrofit.Builder().baseUrl("http://www.uhomecp.com").build()
 
 
@@ -113,7 +113,7 @@ class OpenDoorWidget : AppWidgetProvider() {
         })
     }
 
-    private fun open(token: String, id: String) {
+    fun open(token: String, id: String) {
         val retrofit = Retrofit.Builder().baseUrl("http://www.uhomecp.com").build()
 
 
